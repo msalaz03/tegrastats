@@ -44,8 +44,8 @@ if [[ $1 == "--once" ]]; then
 fi
 
 info_log "Starting system log monitoring with interval: $INTERVAL seconds"
-while [[ SECONDS -lt $END_TIME ]]; do
+while (true); do
     display_stats 
-	sleep $INTERVAL
+    sleep $INTERVAL
 done
 
