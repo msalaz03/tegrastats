@@ -1,7 +1,7 @@
 # !/bin/bash
 # Description: Helper script to help monitor the system for potential issues.
 
-TEAL='\033[4;36m' # Teal
+TEAL='\033[0;36m' # Teal
 NC='\033[0m' # No Color
 YELLOW='\033[1;33m' # Yellow
 
@@ -32,7 +32,7 @@ fi
 
 # =================================		MAIN	 ========================================
 INTERVAL=$1
-if [[ INTERVAL == "" ]]; then
+if [[ $INTERVAL == "" ]]; then
     warning_log "Interval not provided, skipping..."
     exit 0
 fi
